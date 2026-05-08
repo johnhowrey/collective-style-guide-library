@@ -1,0 +1,14 @@
+{
+  "name": "@collective/beacon",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Beacon — a Schiphol-inspired wayfinding visual identity for The Collective Style Guide Library.",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": { ".": "./src/index.ts", "./theme": "./src/theme.ts", "./tokens": "./llm/tokens.json" },
+  "scripts": { "typecheck": "tsc --noEmit" },
+  "dependencies": { "@collective/foundation": "workspace:*" },
+  "devDependencies": { "typescript": "^5.6.3" },
+  "collective": { "variant": "beacon", "inspiration": "Schiphol wayfinding (Paul Mijksenaar)" }
+}

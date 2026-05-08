@@ -1,0 +1,42 @@
+.block {
+  border: 1px solid var(--cds-border-subtle);
+  border-radius: var(--collective-radius-sm, 0);
+  background: var(--cds-layer-accent);
+  overflow: hidden;
+  margin: 16px 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--cds-border-subtle);
+  font-family: var(--collective-font-mono, monospace);
+  font-size: 11px;
+  color: var(--cds-text-secondary);
+}
+
+.filename {
+  color: var(--cds-text-primary);
+}
+
+.lang {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.pre {
+  margin: 0;
+  padding: 16px;
+  overflow-x: auto;
+  font-family: var(--collective-font-mono, monospace);
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--cds-text-primary);
+}
+
+.pre code {
+  font: inherit;
+  color: inherit;
+  background: transparent;
+}

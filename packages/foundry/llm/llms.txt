@@ -1,0 +1,44 @@
+# Foundry
+
+> Neo Bauhaus visual identity. Part of The Collective Style Guide Library.
+
+Geometric sans, primary palette (red/yellow/blue), sharp corners (0 radius),
+grid-forward composition. Direct, declarative voice. Built on IBM Carbon's
+accessible component foundation.
+
+## Use this variant for
+
+Engineering tools, ops platforms, financial dashboards, serious B2B SaaS.
+
+## Modes & densities
+
+- Modes: `light`, `dark`
+- Densities: `comfortable`, `compact`
+- RTL: supported (locales tested: en, de, fr, es, ja, ar)
+
+## Quick token reference (light mode)
+
+- Background: #FAFAFA  / Surface: #FFFFFF  / Text: #0A0A0A
+- Accent: #ED1C24 (red) / #FCD300 (yellow) / #1A4FAD (blue)
+- Radius: 0  /  Sans: futura-pt  /  Display: futura-pt-bold
+
+## Resources
+
+- [Tokens (DTCG)](./tokens.json)
+- [Principles](./principles.md)
+- [Content & microcopy](./content.md)
+- [Motion](./motion.md)
+- [i18n & RTL](./i18n.md)
+- [Starter prompt for LLMs](./starter-prompt.md)
+- [Component manifest](./components.json)
+
+## Install
+
+```ts
+import { theme } from "@collective/foundry";
+import { ThemeProvider } from "@collective/foundation";
+
+<ThemeProvider theme={theme} mode="light" density="comfortable">
+  <YourApp />
+</ThemeProvider>
+```

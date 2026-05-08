@@ -1,0 +1,66 @@
+// The Collective Style Guide Library — global styles.
+// Carbon foundation is imported once. Variant tokens are applied at runtime
+// via ThemeProvider as CSS custom properties on :root.
+
+@use "@carbon/styles/scss/reset";
+@use "@carbon/styles/scss/themes";
+@use "@carbon/styles/scss/theme" with (
+  $theme: themes.$white
+);
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: var(--cds-background);
+  color: var(--cds-text-primary);
+  font-family: var(--collective-font-sans, system-ui, -apple-system, sans-serif);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body[data-body-family="serif"] {
+  font-family: var(--collective-font-serif, Georgia, serif);
+}
+
+a {
+  color: var(--cds-link-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--cds-focus);
+  outline-offset: 2px;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--cds-focus);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--collective-accent-primary, #ED1C24);
+  color: var(--collective-accent-on-primary, #FFFFFF);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

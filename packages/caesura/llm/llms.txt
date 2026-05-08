@@ -1,0 +1,31 @@
+# Caesura
+
+> Bringhurst-inspired classical book typography. Part of The Collective Style Guide Library.
+
+Old-style serif body, Myriad-lineage chrome, oxblood accent on warm cream. Hanging punctuation, optical alignment, generous leading. Voice runs literary and considered.
+
+## Use this variant for
+
+Writing tools, reading apps, knowledge tools that prize craft, slow-tech products.
+
+## Modes & densities
+
+- Modes: `light`, `dark`. Densities: `comfortable`, `compact`. RTL: supported.
+
+## Quick token reference (light)
+
+- bg: #FBF8F2 / surface: #FFFFFF / text: #1A1817 / border: #C9C0B0
+- accent: #6B1F1F (oxblood)
+- radius: 0 / serif body: minion-pro / sans chrome: myriad-pro
+
+## Resources
+
+- [Tokens](./tokens.json) / [Principles](./principles.md) / [Content](./content.md) / [Motion](./motion.md) / [i18n](./i18n.md) / [Starter prompt](./starter-prompt.md) / [Components](./components.json)
+
+## Install
+
+```ts
+import { theme } from "@collective/caesura";
+import { ThemeProvider } from "@collective/foundation";
+<ThemeProvider theme={theme}><YourApp /></ThemeProvider>
+```

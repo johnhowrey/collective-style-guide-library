@@ -1,0 +1,43 @@
+.exhibit {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.row {
+  border-top: 1px solid var(--cds-border-subtle);
+  padding-top: 24px;
+}
+
+.row:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.row h3 {
+  font-family: var(--collective-font-display, var(--collective-font-sans));
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 16px;
+  color: var(--cds-text-primary);
+}
+
+.demoRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.demoCol {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  align-items: start;
+}

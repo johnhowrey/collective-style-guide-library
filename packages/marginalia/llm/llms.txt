@@ -1,0 +1,31 @@
+# Marginalia
+
+> Penguin Books-inspired bookish visual identity. Part of The Collective Style Guide Library.
+
+Cream paper, serif body (Bembo-lineage), Gill Sans chrome, Penguin orange accent. Sharp tri-band layouts, page-turn motion rhythm. Built on IBM Carbon's accessible component foundation.
+
+## Use this variant for
+
+Reading-first products, publishing CMSes, knowledge bases that prize prose, journaling tools.
+
+## Modes & densities
+
+- Modes: `light`, `dark`. Densities: `comfortable`, `compact`. RTL: supported.
+
+## Quick token reference (light)
+
+- bg: #F4ECD8 (cream) / surface: #F8F1DF / text: #1A1612 / border: #C9BFA8
+- accent: #E96528 (Penguin orange)
+- radius: 0 / serif body: bembo-book / sans chrome: gill-sans-nova
+
+## Resources
+
+- [Tokens](./tokens.json) / [Principles](./principles.md) / [Content](./content.md) / [Motion](./motion.md) / [i18n](./i18n.md) / [Starter prompt](./starter-prompt.md) / [Components](./components.json)
+
+## Install
+
+```ts
+import { theme } from "@collective/marginalia";
+import { ThemeProvider } from "@collective/foundation";
+<ThemeProvider theme={theme}><YourApp /></ThemeProvider>
+```

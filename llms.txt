@@ -1,0 +1,43 @@
+# The Collective Style Guide Library
+
+> Enterprise- and SaaS-ready visual identities. Seven variants on one accessible foundation (IBM Carbon, Apache 2.0).
+
+Each variant is a complete design system: tokens, principles, content/voice, motion, i18n stance, and a starter prompt for LLMs. Designed for direct use by Claude, Cursor, Figma, and other agents.
+
+## Variants
+
+- [Foundry](packages/foundry/llm/llms.txt) — Neo Bauhaus. Geometric sans, primary RYB palette, sharp corners, grid-forward.
+- [Vellum](packages/vellum/llm/llms.txt) — International Style. Swiss grid, restrained palette, paper-cool clarity.
+- [Beacon](packages/beacon/llm/llms.txt) — Schiphol wayfinding. Signage yellow, near-black ink, hierarchy as design.
+- [Marginalia](packages/marginalia/llm/llms.txt) — Penguin Books. Cream paper, serif body, Penguin orange accent.
+- [Proscenium](packages/proscenium/llm/llms.txt) — The Public Theater. Wood-type display, hot magenta + yellow.
+- [Caesura](packages/caesura/llm/llms.txt) — Bringhurst. Classical book typography, oxblood accent, careful spacing.
+- [Cipher](packages/cipher/llm/llms.txt) — Engineering tooling. Dark-first, Inter + JetBrains Mono, syntax-highlighting palette.
+
+## Per-variant LLM artifacts
+
+Each variant ships a complete LLM-readable layer at `packages/<variant>/llm/`:
+
+- `tokens.json` — DTCG-format design tokens (source of truth)
+- `principles.md` — visual character, do/don't, when to choose
+- `content.md` — voice and microcopy patterns
+- `motion.md` — motion personality and reduced-motion behavior
+- `i18n.md` — locale fitness and RTL guidance
+- `starter-prompt.md` — drop-in starter prompt for any LLM
+- `components.json` — schema-validated component manifest
+- `llms.txt` — concise machine-readable summary
+
+## Tooling
+
+- **MCP server**: `packages/mcp/` — local stdio + remote HTTP transports
+- **Figma Code Connect**: `figma/code-connect/` — design-to-code mappings (deferred until variants ship components)
+- **Showcase site**: `apps/showcase/` — Next.js documentation and template renderer
+- **Storybook (secondary)**: `apps/storybook/` — raw component exploration (deferred)
+
+## Foundation
+
+Built on IBM Carbon Design System (Apache 2.0). Variants override Carbon's design tokens to express alternative visual identities. Component machinery, accessibility, RTL, motion, density, and i18n are inherited from Carbon.
+
+## License
+
+Apache 2.0. See LICENSE and NOTICE files at the repo root.

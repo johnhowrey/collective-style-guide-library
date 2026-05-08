@@ -1,0 +1,31 @@
+# Proscenium
+
+> Public Theater-inspired theatrical visual identity. Part of The Collective Style Guide Library.
+
+Wood-type condensed display, hot magenta + yellow, deep black or playbill cream. Layered, edge-to-edge, sharp corners. Voice runs theatrical and declarative.
+
+## Use this variant for
+
+Marketing sites, creative tools, brand-forward products, anything that wants personality over restraint.
+
+## Modes & densities
+
+- Modes: `light`, `dark` (canonical). Densities: `comfortable`, `compact`. RTL: supported (tempered for non-Latin).
+
+## Quick token reference (dark)
+
+- bg: #0A0A0A / surface: #1A1A1A / text: #FAFAFA / border: #FAFAFA
+- accent: #FF3A9F (magenta) / secondary: #FFE500 (yellow)
+- radius: 0 / display: knockout / sans: trade-gothic-next
+
+## Resources
+
+- [Tokens](./tokens.json) / [Principles](./principles.md) / [Content](./content.md) / [Motion](./motion.md) / [i18n](./i18n.md) / [Starter prompt](./starter-prompt.md) / [Components](./components.json)
+
+## Install
+
+```ts
+import { theme } from "@collective/proscenium";
+import { ThemeProvider } from "@collective/foundation";
+<ThemeProvider theme={theme} mode="dark"><YourApp /></ThemeProvider>
+```

@@ -1,0 +1,7 @@
+// Foundation styles — imported once at the showcase level.
+// Variant SCSS layers on top of this and overrides Carbon tokens via
+// the CSS custom properties the ThemeProvider applies at runtime.
+
+@use "@carbon/styles/scss/reset";
+@use "@carbon/styles/scss/grid";
+@use "@carbon/styles/scss/components";

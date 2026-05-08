@@ -1,0 +1,44 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background: var(--cds-layer);
+  border: 1px solid var(--cds-border-subtle);
+  border-radius: var(--collective-radius-sm, 0);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 100ms ease;
+}
+
+.card:hover {
+  border-color: var(--cds-text-primary);
+  text-decoration: none;
+}
+
+.card h3 {
+  font-family: var(--collective-font-display, var(--collective-font-sans));
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+.card p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--cds-text-secondary);
+  margin: 0 0 12px;
+  flex: 1;
+}
+
+.cardLink {
+  font-family: var(--collective-font-mono, monospace);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--collective-accent-primary, var(--cds-link-primary));
+}

@@ -1,0 +1,31 @@
+# Beacon
+
+> Schiphol wayfinding visual identity. Part of The Collective Style Guide Library.
+
+Wayfinding clarity, signage yellow `#FFCC00`, near-black ink, sharp corners, Frutiger-lineage humanist sans. Voice is instructive and directional.
+
+## Use this variant for
+
+Operations dashboards, deep navigation hierarchies, transit / logistics products, anywhere users must orient before acting.
+
+## Modes & densities
+
+- Modes: `light`, `dark`. Densities: `comfortable`, `compact`. RTL: supported.
+
+## Quick token reference (light)
+
+- bg: #FFFFFF / surface: #FFFFFF / text: #1B1B1B / border: #1B1B1B
+- accent: #FFCC00 (signage yellow), with #000000 text on yellow
+- radius: 0 / sans: frutiger
+
+## Resources
+
+- [Tokens](./tokens.json) / [Principles](./principles.md) / [Content](./content.md) / [Motion](./motion.md) / [i18n](./i18n.md) / [Starter prompt](./starter-prompt.md) / [Components](./components.json)
+
+## Install
+
+```ts
+import { theme } from "@collective/beacon";
+import { ThemeProvider } from "@collective/foundation";
+<ThemeProvider theme={theme}><YourApp /></ThemeProvider>
+```

@@ -1,0 +1,33 @@
+# Vellum
+
+> International Style visual identity. Part of The Collective Style Guide Library.
+
+Swiss grid, Helvetica-lineage type, single terracotta accent on cream paper. 2px radius, generous whitespace, calm motion. Built on IBM Carbon's accessible component foundation.
+
+## Use this variant for
+
+Documentation systems, knowledge bases, reading-heavy enterprise products, calm internal tools.
+
+## Modes & densities
+
+- Modes: `light`, `dark`
+- Densities: `comfortable`, `compact`
+- RTL: supported
+
+## Quick token reference (light)
+
+- Background: #F8F7F4 / Surface: #FFFFFF / Text: #1A1A1A / Border: #D6D3CC
+- Accent: #B8442C (terracotta) — single accent
+- Radius: 2px / Sans: neue-haas-grotesk-text
+
+## Resources
+
+- [Tokens (DTCG)](./tokens.json) / [Principles](./principles.md) / [Content](./content.md) / [Motion](./motion.md) / [i18n](./i18n.md) / [Starter prompt](./starter-prompt.md) / [Components](./components.json)
+
+## Install
+
+```ts
+import { theme } from "@collective/vellum";
+import { ThemeProvider } from "@collective/foundation";
+<ThemeProvider theme={theme}><YourApp /></ThemeProvider>
+```

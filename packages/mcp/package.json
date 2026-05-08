@@ -1,0 +1,36 @@
+{
+  "name": "@collective/mcp",
+  "version": "0.0.0",
+  "private": false,
+  "description": "MCP server for The Collective Style Guide Library. Speaks to Claude Code, Cursor, Claude.ai and any other Model Context Protocol client.",
+  "type": "module",
+  "bin": {
+    "collective-mcp": "./bin/cli.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "bin",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}
