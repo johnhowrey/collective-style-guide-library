@@ -1,0 +1,29 @@
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: transparent;
+  color: var(--cds-text-primary);
+  border: 1px solid var(--cds-border-subtle);
+  border-radius: var(--collective-radius-sm, 0);
+  cursor: pointer;
+  transition: background-color 100ms ease, border-color 100ms ease;
+  flex-shrink: 0;
+}
+
+.toggle:hover {
+  background: var(--cds-layer-accent);
+  border-color: var(--cds-text-primary);
+}
+
+.toggle:focus-visible {
+  outline: 2px solid var(--cds-focus);
+  outline-offset: 2px;
+}
+
+.toggle svg {
+  width: 16px;
+  height: 16px;
+}

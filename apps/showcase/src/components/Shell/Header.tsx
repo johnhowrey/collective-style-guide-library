@@ -3,6 +3,7 @@
 import Link from "next/link";
 import type { Theme, ColorMode, Density } from "@collective/foundation";
 import { VARIANTS } from "@/lib/variants";
+import { ModeToggle } from "./ModeToggle";
 import styles from "./Header.module.scss";
 
 interface HeaderProps {
@@ -61,18 +62,6 @@ export function Header({
         </label>
 
         <label className={styles.control}>
-          <span className={styles.controlLabel}>Mode</span>
-          <select
-            value={mode}
-            onChange={(e) => onModeChange(e.target.value as ColorMode)}
-            aria-label="Color mode"
-          >
-            <option value="light">Light</option>
-            <option value="dark">Dark</option>
-          </select>
-        </label>
-
-        <label className={styles.control}>
           <span className={styles.controlLabel}>Density</span>
           <select
             value={density}
@@ -84,6 +73,8 @@ export function Header({
           </select>
         </label>
       </div>
+
+      <ModeToggle mode={mode} onModeChange={onModeChange} />
     </header>
   );
 }
