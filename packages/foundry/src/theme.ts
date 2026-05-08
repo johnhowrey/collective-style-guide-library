@@ -15,7 +15,7 @@ export const theme: Theme = {
     version: "0.0.0",
   },
   fonts: {
-    provider: { type: "adobe", kitId: "scl4zaa" },
+    provider: { type: "adobe", kitId: "mru0igx" },
     family: fontStack,
     fallbacks: {
       cjk: "'Noto Sans JP', 'Noto Sans SC', 'Hiragino Sans', sans-serif",

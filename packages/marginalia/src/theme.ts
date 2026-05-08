@@ -16,7 +16,7 @@ export const theme: Theme = {
     version: "0.0.0",
   },
   fonts: {
-    provider: { type: "adobe", kitId: "scl4zaa" },
+    provider: { type: "adobe", kitId: "mru0igx" },
     family: fontStack,
     fallbacks: {
       cjk: "'Noto Serif JP', 'YuMincho', 'Hiragino Mincho ProN', serif",
