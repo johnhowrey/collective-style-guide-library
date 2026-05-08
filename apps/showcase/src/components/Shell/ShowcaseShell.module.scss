@@ -6,21 +6,20 @@
 }
 
 .body {
-  display: grid;
-  grid-template-columns: 240px 1fr;
+  display: flex;
   flex: 1;
   min-height: 0;
 }
 
-@media (max-width: 768px) {
-  .body {
-    grid-template-columns: 1fr;
-  }
-}
-
 .main {
+  flex: 1;
   min-width: 0;
   padding: 32px clamp(16px, 4vw, 48px) 64px;
-  max-width: 1240px;
-  width: 100%;
+  overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 24px 16px 64px;
+  }
 }

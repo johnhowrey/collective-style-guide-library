@@ -1,0 +1,132 @@
+.wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  background: var(--cds-background);
+  min-width: 280px;
+  border-left: 1px solid var(--cds-border-subtle);
+  border-right: 1px solid var(--cds-border-subtle);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 12px;
+  flex-shrink: 0;
+  color: var(--cds-text-secondary);
+}
+
+.input {
+  flex: 1;
+  height: 100%;
+  padding: 0 12px;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: var(--collective-font-sans);
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--cds-text-primary);
+  min-width: 0;
+}
+
+.input::placeholder {
+  color: var(--cds-text-secondary);
+  font-weight: 500;
+}
+
+.kbd {
+  font-family: var(--collective-font-mono, monospace);
+  font-size: 11px;
+  color: var(--cds-text-secondary);
+  padding: 2px 6px;
+  margin-right: 8px;
+  border: 1px solid var(--cds-border-subtle);
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 0px);
+  left: 0;
+  width: 100%;
+  min-width: 360px;
+  max-height: 420px;
+  overflow-y: auto;
+  background: var(--cds-layer);
+  border: 1px solid var(--cds-border-subtle);
+  border-top: none;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  z-index: 2000;
+  font-family: var(--collective-font-sans);
+}
+
+.group {
+  padding-bottom: 4px;
+}
+
+.sectionHead {
+  padding: 10px 16px 4px;
+  font-family: var(--collective-font-mono, monospace);
+  font-weight: 600;
+  font-size: 10px;
+  color: var(--cds-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 16px;
+  height: 36px;
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--cds-text-primary);
+  cursor: pointer;
+  gap: 12px;
+  text-align: left;
+}
+
+.row:hover {
+  background: color-mix(in srgb, var(--collective-accent-primary, var(--cds-link-primary)) 8%, transparent);
+}
+
+.rowLabel {
+  flex-shrink: 0;
+}
+
+.rowDetail {
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--cds-text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: auto;
+}
+
+.noResults {
+  padding: 20px 16px;
+  font-size: 13px;
+  color: var(--cds-text-secondary);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .wrap {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .kbd {
+    display: none;
+  }
+}

@@ -1,9 +1,11 @@
 "use client";
 
-import Link from "next/link";
 import type { Theme, ColorMode, Density } from "@collective/foundation";
 import { VARIANTS } from "@/lib/variants";
+import { Breadcrumbs } from "./Breadcrumbs";
+import { Search } from "./Search";
 import { ModeToggle } from "./ModeToggle";
+import { icons } from "./icons";
 import styles from "./Header.module.scss";
 
 interface HeaderProps {
@@ -15,6 +17,9 @@ interface HeaderProps {
   onModeChange: (mode: ColorMode) => void;
   density: Density;
   onDensityChange: (density: Density) => void;
+  assistantOpen: boolean;
+  onToggleAssistant: () => void;
+  onOpenMobileNav: () => void;
 }
 
 export function Header({
@@ -26,23 +31,28 @@ export function Header({
   onModeChange,
   density,
   onDensityChange,
+  assistantOpen,
+  onToggleAssistant,
+  onOpenMobileNav,
 }: HeaderProps) {
   return (
     <header className={styles.header}>
-      <Link href="/" className={styles.brand}>
-        <span className={styles.brandMark} aria-hidden="true" />
-        <span className={styles.brandWord}>The Collective</span>
-        <span className={styles.brandSlash}>/</span>
-        <span className={styles.brandVariant}>{variant.meta.name}</span>
-      </Link>
+      <button
+        type="button"
+        className={styles.hamburger}
+        aria-label="Open navigation"
+        onClick={onOpenMobileNav}
+      >
+        {icons.hamburger}
+      </button>
 
-      <nav className={styles.primaryNav} aria-label="Primary">
-        <Link href="/getting-started">Get started</Link>
-        <Link href="/variants">Variants</Link>
-        <Link href="/templates">Templates</Link>
-        <Link href="/ai">AI</Link>
-        <Link href="/changelog">Changelog</Link>
-      </nav>
+      <div className={styles.crumbs}>
+        <Breadcrumbs />
+      </div>
+
+      <div className={styles.searchSlot}>
+        <Search />
+      </div>
 
       <div className={styles.controls}>
         <label className={styles.control}>
@@ -74,7 +84,25 @@ export function Header({
         </label>
       </div>
 
+      <button
+        type="button"
+        className={[styles.assistant, assistantOpen && styles.assistantActive]
+          .filter(Boolean)
+          .join(" ")}
+        onClick={onToggleAssistant}
+        aria-label="AI Assistant (⌘K)"
+        title="AI Assistant (⌘K)"
+        aria-pressed={assistantOpen}
+      >
+        {icons.sparkles}
+        <span className={styles.assistantLabel}>AI</span>
+      </button>
+
       <ModeToggle mode={mode} onModeChange={onModeChange} />
+
+      <span className={styles.brandTag} aria-hidden="true">
+        {variant.meta.name}
+      </span>
     </header>
   );
 }
