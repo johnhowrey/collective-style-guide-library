@@ -1,8 +1,8 @@
 import type { Theme } from "@collective/foundation";
 
 const fontStack = {
-  sans: "inter, 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif",
-  display: "inter-display, 'Inter Display', 'Inter', system-ui, sans-serif",
+  sans: "inter-18pt, 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif",
+  display: "inter-28pt, 'Inter Display', 'Inter', system-ui, sans-serif",
   mono: "jetbrains-mono, 'JetBrains Mono', 'Fira Code', 'SF Mono', Menlo, monospace",
 };
 

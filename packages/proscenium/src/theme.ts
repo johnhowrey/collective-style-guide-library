@@ -1,8 +1,8 @@
 import type { Theme } from "@collective/foundation";
 
 const fontStack = {
-  sans: "trade-gothic-next, 'Trade Gothic Next', 'Helvetica Neue', helvetica, sans-serif",
-  display: "knockout, druk, 'Trade Gothic Next Condensed', 'Helvetica Neue Condensed', sans-serif",
+  sans: "trade-gothic-next-lt-pro, 'Trade Gothic Next', 'Helvetica Neue', helvetica, sans-serif",
+  display: "trade-gothic-next-condensed, 'Trade Gothic Next Condensed', 'Helvetica Neue Condensed', sans-serif",
   mono: "ibm-plex-mono, 'JetBrains Mono', monospace",
 };
 

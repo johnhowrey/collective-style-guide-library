@@ -1,8 +1,8 @@
 import type { Theme } from "@collective/foundation";
 
 const fontStack = {
-  sans: "frutiger, 'Frutiger LT W01', 'Source Sans 3', 'Helvetica Neue', sans-serif",
-  display: "frutiger-bold, 'Frutiger LT W01 Bold', 'Source Sans 3', sans-serif",
+  sans: "neue-frutiger-world, 'Frutiger LT W01', 'source-sans-3-variable', 'Helvetica Neue', sans-serif",
+  display: "neue-frutiger-world, 'Frutiger LT W01 Bold', 'source-sans-3-variable', sans-serif",
   mono: "ibm-plex-mono, 'JetBrains Mono', monospace",
 };
 

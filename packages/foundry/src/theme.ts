@@ -2,7 +2,7 @@ import type { Theme } from "@collective/foundation";
 
 const fontStack = {
   sans: "futura-pt, futura, 'Helvetica Neue', helvetica, arial, sans-serif",
-  display: "futura-pt-bold, futura, 'Helvetica Neue', sans-serif",
+  display: "futura-pt, futura, 'Helvetica Neue', sans-serif",
   mono: "iosevka, 'JetBrains Mono', 'SF Mono', monospace",
 };
 

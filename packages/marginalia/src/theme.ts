@@ -1,9 +1,9 @@
 import type { Theme } from "@collective/foundation";
 
 const fontStack = {
-  serif: "bembo-book, 'Adobe Garamond Pro', 'ITC New Baskerville', 'Hoefler Text', Georgia, serif",
-  sans: "gill-sans-nova, 'Gill Sans', 'Helvetica Neue', helvetica, sans-serif",
-  display: "gill-sans-nova, 'Gill Sans', 'Helvetica Neue', sans-serif",
+  serif: "bembo-book-mt-pro, 'Adobe Garamond Pro', 'ITC New Baskerville', 'Hoefler Text', Georgia, serif",
+  sans: "gill-sans-nova-book, 'Gill Sans', 'Helvetica Neue', helvetica, sans-serif",
+  display: "gill-sans-nova-book, 'Gill Sans', 'Helvetica Neue', sans-serif",
   mono: "ibm-plex-mono, 'JetBrains Mono', monospace",
 };
 

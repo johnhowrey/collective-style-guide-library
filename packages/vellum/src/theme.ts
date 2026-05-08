@@ -1,8 +1,8 @@
 import type { Theme } from "@collective/foundation";
 
 const fontStack = {
-  sans: "neue-haas-grotesk-text, 'Helvetica Neue', helvetica, arial, sans-serif",
-  display: "neue-haas-grotesk-display, 'Helvetica Neue', sans-serif",
+  sans: "neue-haas-grotesk-text-pro, 'Helvetica Neue', helvetica, arial, sans-serif",
+  display: "neue-haas-grotesk-display-pr, 'Helvetica Neue', sans-serif",
   mono: "ibm-plex-mono, 'JetBrains Mono', monospace",
 };
 

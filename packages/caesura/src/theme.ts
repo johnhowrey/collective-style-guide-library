@@ -1,9 +1,9 @@
 import type { Theme } from "@collective/foundation";
 
 const fontStack = {
-  serif: "minion-pro, 'Adobe Caslon Pro', 'Garamond Premier Pro', 'Hoefler Text', Georgia, serif",
+  serif: "minion-3, 'Adobe Caslon Pro', 'Garamond Premier Pro', 'Hoefler Text', Georgia, serif",
   sans: "myriad-pro, 'Source Sans 3', 'Helvetica Neue', helvetica, sans-serif",
-  display: "minion-pro-display, minion-pro, 'Adobe Caslon Pro', serif",
+  display: "minion-3, 'Adobe Caslon Pro', serif",
   mono: "ibm-plex-mono, 'JetBrains Mono', monospace",
 };
 
