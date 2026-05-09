@@ -1,0 +1,224 @@
+.wrap {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  flex-shrink: 0;
+}
+
+.trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+  padding: 0 14px;
+  background: var(--cds-layer);
+  border: none;
+  border-right: 1px solid var(--cds-border-subtle);
+  border-left: 1px solid var(--cds-border-subtle);
+  color: var(--cds-text-primary);
+  cursor: pointer;
+  font-family: var(--collective-font-display, var(--collective-font-sans));
+}
+
+.trigger:hover {
+  background: var(--cds-layer-accent);
+}
+
+.swatch {
+  width: 18px;
+  height: 18px;
+  border-radius: var(--collective-radius-sm, 0);
+  background: var(--swatch);
+  flex-shrink: 0;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  align-items: flex-start;
+  line-height: 1;
+}
+
+.label {
+  font-family: var(--collective-font-mono, monospace);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cds-text-secondary);
+}
+
+.name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--cds-text-primary);
+}
+
+.chevron,
+.chevronOpen {
+  flex-shrink: 0;
+  color: var(--cds-text-secondary);
+  transition: transform 0.15s ease;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+.popover {
+  position: absolute;
+  top: calc(100% + 0px);
+  right: 0;
+  background: var(--cds-layer);
+  border: 1px solid var(--cds-border-subtle);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+  z-index: 100;
+  min-width: 480px;
+  padding: 12px;
+  font-family: var(--collective-font-sans);
+}
+
+@media (max-width: 540px) {
+  .popover {
+    position: fixed;
+    top: 60px;
+    right: 8px;
+    left: 8px;
+    min-width: 0;
+  }
+}
+
+.popoverHead {
+  font-family: var(--collective-font-mono, monospace);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cds-text-secondary);
+  margin: 0 0 10px;
+  padding: 0 4px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+}
+
+@media (max-width: 540px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--collective-radius-sm, 0);
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  transition: background 0.1s ease, border-color 0.1s ease;
+}
+
+.card:hover {
+  background: var(--cds-layer-accent);
+}
+
+.cardActive {
+  border-color: var(--collective-accent-primary, var(--cds-focus));
+  background: var(--cds-layer-accent);
+}
+
+.preview {
+  width: 64px;
+  height: 44px;
+  background: var(--preview-bg);
+  border: 1px solid var(--preview-border);
+  border-radius: var(--collective-radius-sm, 0);
+  position: relative;
+  flex-shrink: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  gap: 3px;
+}
+
+.previewBar {
+  width: 18px;
+  height: 4px;
+  background: var(--preview-swatch);
+}
+
+.previewLines {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.previewLine {
+  height: 2px;
+  width: 80%;
+  background: var(--preview-text);
+  opacity: 0.5;
+}
+
+.previewBtn {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  font-family: var(--collective-font-display, var(--collective-font-sans));
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--preview-text);
+}
+
+.cardText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  flex: 1;
+}
+
+.cardName {
+  font-family: var(--collective-font-display, var(--collective-font-sans));
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--cds-text-primary);
+}
+
+.cardKicker {
+  font-family: var(--collective-font-mono, monospace);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cds-text-secondary);
+}
+
+.activeBadge {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  font-family: var(--collective-font-mono, monospace);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--collective-accent-primary, var(--cds-focus));
+}
+
+.popoverNote {
+  margin: 12px 4px 0;
+  font-family: var(--collective-font-sans);
+  font-size: 11px;
+  color: var(--cds-text-secondary);
+}

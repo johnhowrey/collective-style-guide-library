@@ -1,10 +1,11 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import type { Theme, ColorMode, Density } from "@collective/foundation";
-import { VARIANTS } from "@/lib/variants";
 import { Breadcrumbs } from "./Breadcrumbs";
 import { Search } from "./Search";
 import { ModeToggle } from "./ModeToggle";
+import { VariantPicker } from "./VariantPicker";
 import { icons } from "./icons";
 import styles from "./Header.module.scss";
 
@@ -35,6 +36,8 @@ export function Header({
   onToggleAssistant,
   onOpenMobileNav,
 }: HeaderProps) {
+  const pathname = usePathname();
+
   return (
     <header className={styles.header}>
       <button
@@ -54,25 +57,9 @@ export function Header({
         <Search />
       </div>
 
-      <div className={styles.controls}>
-        <label className={styles.control}>
-          <span className={styles.controlLabel}>Variant</span>
-          <select
-            value={variantId}
-            onChange={(e) => onVariantChange(e.target.value)}
-            disabled={variantLocked}
-            aria-label="Active variant"
-          >
-            {VARIANTS.map((v) => (
-              <option key={v.meta.id} value={v.meta.id}>
-                {v.meta.name}
-              </option>
-            ))}
-          </select>
-        </label>
-
-        <label className={styles.control}>
-          <span className={styles.controlLabel}>Density</span>
+      <div className={styles.densitySlot}>
+        <label className={styles.densityControl}>
+          <span className={styles.densityLabel}>Density</span>
           <select
             value={density}
             onChange={(e) => onDensityChange(e.target.value as Density)}
@@ -83,6 +70,14 @@ export function Header({
           </select>
         </label>
       </div>
+
+      <VariantPicker
+        activeVariantId={variantId}
+        active={variant}
+        urlDriven={variantLocked}
+        pathname={pathname}
+        onPick={onVariantChange}
+      />
 
       <button
         type="button"
@@ -99,10 +94,6 @@ export function Header({
       </button>
 
       <ModeToggle mode={mode} onModeChange={onModeChange} />
-
-      <span className={styles.brandTag} aria-hidden="true">
-        {variant.meta.name}
-      </span>
     </header>
   );
 }
