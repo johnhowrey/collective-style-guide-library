@@ -1,0 +1,108 @@
+.variantsBlock {
+  margin-bottom: 48px;
+}
+
+.sectionTitle {
+  font-family: var(--collective-font-display, var(--collective-font-sans));
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 16px;
+}
+
+.variantsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+
+.variantCard {
+  display: flex;
+  gap: 14px;
+  padding: 16px;
+  background: var(--cds-layer);
+  border: 1px solid var(--cds-border-subtle);
+  border-radius: var(--collective-radius-sm, 0);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.1s ease;
+}
+
+.variantCard:hover {
+  border-color: var(--cds-text-primary);
+  text-decoration: none;
+}
+
+.variantSwatch {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--collective-radius-sm, 0);
+  flex-shrink: 0;
+}
+
+.variantText h3 {
+  font-family: var(--collective-font-display, var(--collective-font-sans));
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 2px;
+}
+
+.variantKicker {
+  font-family: var(--collective-font-mono, monospace);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cds-text-secondary);
+  margin: 0 0 6px;
+}
+
+.variantTagline {
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--cds-text-secondary);
+  margin: 0;
+}
+
+.docsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.docCard {
+  background: var(--cds-layer);
+  border: 1px solid var(--cds-border-subtle);
+  border-radius: var(--collective-radius-sm, 0);
+  padding: 16px;
+}
+
+.docTitle {
+  font-family: var(--collective-font-display, var(--collective-font-sans));
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--cds-text-primary);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.docList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.docList a {
+  font-family: var(--collective-font-sans);
+  font-size: 13px;
+  color: var(--cds-text-secondary);
+  text-decoration: none;
+}
+
+.docList a:hover {
+  color: var(--collective-accent-primary, var(--cds-link-primary));
+  text-decoration: underline;
+}
